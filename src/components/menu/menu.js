@@ -44,8 +44,8 @@ class  Menu extends Component {
     };
     render(){
     return   <div className="menu">
-    {this.state.sections.map(({title, imageUrl,id,size}) => (
-    <MenuItem key={id} title={title.toLocaleUpperCase()} imageUrl={imageUrl} size={size}></MenuItem>
+    {this.state.sections.map(({id , ...otherProps}) => (
+    <MenuItem key={id} {...otherProps}></MenuItem>
     )
     )}
    </div>
